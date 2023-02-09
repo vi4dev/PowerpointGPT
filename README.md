@@ -42,4 +42,4 @@ I just felt like giving it a shot and ended up using VBA macros to call OpenAI A
     
 ## extra
 
-It's my first ever github upload!!! 2/9/2023
+It's my first ever github upload!!! 2/9/2023 (also , thanks to chatgpt for explaining lots of stuff along the way)
