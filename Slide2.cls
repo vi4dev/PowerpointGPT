@@ -16,14 +16,14 @@ Dim obj As Object
 
 type_area_value = type_area.Value
 
-'Send type_area_value to OpenAI API and store the response in response_gpt
+
 response_gpt = GetOpenAIAPIResponse(type_area_value)
 
 Set obj = JsonConverter.ParseJSON(response_gpt)
 
-'Debug.Print response_gpt
+
 Set dic = Module1.ParseJSON(response_gpt)
-'Debug.Print dic("obj.choices(0).text")
+
 End Sub
 
 Sub Start_User_Copy()
@@ -49,7 +49,7 @@ Function GetOpenAIAPIResponse(text As String) As String
 
 Dim request As Object
 Set request = CreateObject("MSXML2.XMLHTTP")
-'Replace API_KEY and API_ENDPOINT with your actual API key and endpoint
+
 request.Open "POST", "https://api.openai.com/v1/completions", False
 request.setRequestHeader "Content-Type", "application/json"
 request.setRequestHeader "Authorization", "Bearer " & ActivePresentation.Slides(1).Shapes("api_box").OLEFormat.Object.text
